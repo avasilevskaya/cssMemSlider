@@ -9,44 +9,51 @@
   </head>
   <body>
     <div class="content">
-      <div class="slides">
-        <label class="slides__slide" for="slide1">
-          <img src="./assets/1.jpg" alt="meme">
-        </label>
-        <label class="slides__slide" for="slide2">
-          <img src="./assets/2.jpg" alt="meme">
-        </label>
-        <label class="slides__slide" for="slide3">
-          <img src="./assets/3.jpg" alt="meme">
-        </label>
-        <label class="slides__slide" for="slide4">
-          <img src="./assets/4.jpg" alt="meme">
-        </label>
+        <div class="slides">
+          <div id="slide1">
+            <img src="./assets/1.jpg" alt="">
+          </div>
+          <div id="slide2">
+            <img src="./assets/2.jpg" alt="">
+          </div>
+          <div id="slide3">
+            <img src="./assets/3.jpg" alt="">
+          </div>
+          <div id="slide4">
+            <img src="./assets/4.jpg" alt="">
+          </div>
+        </div>
+        <div class="names">
+            <label for="dot1">What have I done...</label>
+            <label for="dot2">Been there</label>
+            <label for="dot3">Even sith needs a boost</label>
+            <label for="dot4">Darth Vader. Philantropist</label>
+        </div>
+        <!--div class="dots">
+            <a id="dot1" href="#slide1"></a>
+            <a id="dot2" href="#slide2"></a>
+            <a id="dot3" href="#slide3"></a>
+            <a id="dot4" href="#slide4"></a>
+        </div-->
+
+        <div class="dots">
+          <label class="container">
+            <input type="radio" name="radio" id="slide1" checked="checked">
+            <a id="dot1" href="#slide1"></a>
+          </label>
+          <label class="container">
+            <input type="radio" name="radio" id="slide2">
+            <a id="dot2" href="#slide2"></a>
+          </label>
+          <label class="container">
+            <input type="radio" name="radio" id="slide3">
+            <a id="dot3" href="#slide3"></a>
+          </label>
+          <label class="container">
+            <input type="radio" name="radio" id="slide4">
+            <a id="dot4" href="#slide4"></a>
+          </label>
+        </div>
       </div>
-      <div class="names">
-        <label class="memeName" for="slide1">What have I done...</label>
-        <label class="memeName" for="slide2">Been there</label>
-        <label class="memeName" for="slide3">Even sith needs a boost</label>
-        <label class="memeName" for="slide4">Darth Vader. Philantropist</label>
-      </div>
-      <div class="dots">
-        <label class="container">
-          <input type="radio" name="radio" id="slide1" checked="checked">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">
-          <input type="radio" name="radio" id="slide2">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">
-          <input type="radio" name="radio" id="slide3">
-          <span class="checkmark"></span>
-        </label>
-        <label class="container">
-          <input type="radio" name="radio" id="slide4">
-          <span class="checkmark"></span>
-        </label>
-      </div>
-    </div>
   </body>
 </html>
