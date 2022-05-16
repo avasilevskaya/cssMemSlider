@@ -1,0 +1,160 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+/* @media screen and (max-width: 767px) */
+
+body {
+/*   height: 100%;
+  width: 100%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #28282b;
+}
+
+.content {
+  margin: 5% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 70vw;
+/*   width: fit-content; */
+/*   height: 100%; */
+  display: grid;
+  grid-template-areas:
+    'slides slides slides'
+    'names names dots';
+  grid-row-gap: 20px;    
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    display: grid;
+    grid-template-areas:
+      'slides'
+      'dots'
+      'names';    
+  }
+}
+
+.names {
+  grid-area: names;
+  display: flex;
+  font-size: 1.5rem;
+  font-family: Calibri;
+  color: #ccc;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+/*   visibility: hidden; */
+}
+
+.dots {
+  grid-area: dots;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+  .dots {
+    justify-content: center;
+  }   
+}
+
+.container {
+  display: block;
+  position: relative; 
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+/*   opacity: 0; */
+visibility: hidden;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0; 
+  height: 20px;
+  width: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #eee;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #ffffff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+/*     display: flex;
+  align-items: center; */
+
+/*     top: 9px;
+  left: 9px; */
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background: #2f2c2c;
+}
+
+
+.slides {
+  grid-area: slides;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+/*   max-height: 70vh; */
+  display: flex;
+/*   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;  */
+  /* -webkit-overflow-scrolling: touch; */ 
+}
+
+.slides > label {
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+  border-radius: 3%;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
