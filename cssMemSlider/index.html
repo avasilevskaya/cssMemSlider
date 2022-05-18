@@ -9,6 +9,11 @@
   </head>
   <body>
     <div class="content">
+      <input type="radio" name="switch" id="switch1" checked="checked">
+      <input type="radio" name="switch" id="switch2">
+      <input type="radio" name="switch" id="switch3">
+      <input type="radio" name="switch" id="switch4">
+      <div class="slides-wrapper">
         <div class="slides">
           <div id="slide1">
             <img src="./assets/1.jpg" alt="">
@@ -23,37 +28,28 @@
             <img src="./assets/4.jpg" alt="">
           </div>
         </div>
-        <div class="names">
-            <label for="dot1">What have I done...</label>
-            <!--label for="dot2">Been there</label>
-            <label for="dot3">Even sith needs a boost</label>
-            <label for="dot4">Darth Vader. Philantropist</label-->
-        </div>
-        <!--div class="dots">
-            <a id="dot1" href="#slide1"></a>
-            <a id="dot2" href="#slide2"></a>
-            <a id="dot3" href="#slide3"></a>
-            <a id="dot4" href="#slide4"></a>
-        </div-->
-
-        <div class="dots">
-          <label class="container">
-            <input type="radio" name="radio" id="slide1" checked="checked">
-            <a id="dot1" href="#slide1"></a>
-          </label>
-          <label class="container">
-            <input type="radio" name="radio" id="slide2">
-            <a id="dot2" href="#slide2"></a>
-          </label>
-          <label class="container">
-            <input type="radio" name="radio" id="slide3">
-            <a id="dot3" href="#slide3"></a>
-          </label>
-          <label class="container">
-            <input type="radio" name="radio" id="slide4">
-            <a id="dot4" href="#slide4"></a>
-          </label>
-        </div>
       </div>
+      <div class="names">
+          <label>What have I done...</label>
+          <label>Been there</label>
+          <label>Even sith needs a boost</label>
+          <label>Darth Vader. Philantropist</label>
+      </div>
+      <div class="dots">
+        <label class="dot" for="switch1">
+          <span></span>
+        </label>
+        <label class="dot" for="switch2">
+          <span></span>
+        </label>
+        <label class="dot" for="switch3">
+          <span></span>
+        </label>
+        <label class="dot" for="switch4">
+          <span></span>
+        </label>
+      </div>
+
+    </div>
   </body>
 </html>
